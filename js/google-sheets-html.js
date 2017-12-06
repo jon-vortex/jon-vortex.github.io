@@ -21,7 +21,7 @@ function drawVisualization() {
 /*    var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1y8QRGUT0bb0Wx6lAHbMjNxU7Zs96WDJE9SXRiuQQfJc&output=html&usp=sharing'); original */ 
 	var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1RQq636q0nL9opVjmaHCwX0qmcLizohdKTtrMhYldZUs&output=html&usp=sharing');
 	/*query.setQuery('SELECT A, B, C, D label A "Duration", B "Song", C "Requested By", D "URL"'); */
-	query.setQuery('SELECT A, B, C, D, E, F, G, H, I, J, K, L label A "Device", B "Heart Rate", C "Waterproof", D "Sleep tracker", E "GPS", F "Watch", G "Battery Life", H "Cellular (LTE)", I "Phone Calls", J "Rating", K "Price", L "Comments");
+	query.setQuery('SELECT A, B, C, D, E, F, G, H, I, J, K, L label A "Device", B "Heart Rate", C "Waterproof", D "Sleep tracker", E "GPS", F "Watch", G "Battery Life", H "Cell (LTE)", I "Phone Calls", J "Rating", K "Price", L "Comments"');
     query.send(handleQueryResponse);
 }
 
@@ -33,6 +33,7 @@ function handleQueryResponse(response) {
     var data = response.getDataTable();
     visualization = new google.visualization.Table(document.getElementById('table'));
     visualization.draw(data, {
+		allowHtml: true,
         legend: 'bottom'
     });
 }
