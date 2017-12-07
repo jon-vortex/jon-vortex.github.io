@@ -5,44 +5,18 @@
 <head>
   <meta charset="utf-8">
   <meta content="ie=edge" http-equiv="x-ua-compatible">
-  <title>{{STEAMER}} Playlist</title>
-  <meta content="Online song request list for {{STREAMER}}" name="description">
+  <title>Comparison Guide</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="favicon.ico" rel="shortcut icon">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
-  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 </head>
 
 <body id="background">
-  <div id="box">
-    <h1>{Title}</h1>
-    <script src="js/google-sheets-html.js" type="text/javascript"></script>
-	<input type="text" id="searchBar" onkeyup="search()" placeholder="Search for device..">
-    <div id="table">
-    </div>
-    <p class="small">{{FOOTER TEXT}}</p>
-  </div>
-  <script>
-        function search() {
-            var input, filter, table, tr, td, i;
-            input = document.getElementById("searchBar");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("table");
-            tr = table.getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
-                if (td) {
-                    if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-    </script>
+  <!-- Place this tag where you want the Awesome Table Widget to render -->
+  <div data-type="AwesomeTableView" data-viewID="-L-eJtG2u3OwhgTGXlov"></div>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://awesome-table.com/AwesomeTableInclude.js"></script>
 </body>
 </html>
