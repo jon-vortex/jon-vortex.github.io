@@ -331,23 +331,6 @@ ul li {
 	margin-top: 30px;
 	margin-bottom: 80px;
 }
-
-
-/* ------------------------------------------------------------------------------
-	Small Banner
--------------------------------------------------------------------------------*/
-
-.smallbanner {
-	background-image: url(../images/bannersmall2.jpg);
-	background-position: center top;
-	background-repeat: no-repeat;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;
-	min-height: 140px;
-}
-
 /* ==========================================================================
 	$intro
 ========================================================================== */
