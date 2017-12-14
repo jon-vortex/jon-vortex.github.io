@@ -126,11 +126,10 @@ ul li {
 	letter-spacing:7px;
 }
 #header.fixed {
-	background-color: #fff
+	background-color: #fff;
 }
 #header.fixed a {
-	/*color: #000; */
-	color: rgba(100,100,100,0.6);
+	color: #000;
 }
 #header.fixed .header-content {
 	border-bottom: 0;
@@ -138,8 +137,7 @@ ul li {
 }
 #header.fixed .nav-toggle {
 	top: 18px;
-	/*color: #000; */
-	/*color: rgba(100,100,100,0.6);*/
+	color: #000;
 }
 .navigation.open {
 	opacity: 0.9;
@@ -156,8 +154,7 @@ ul li {
 	display: inline-block;
 }
 .navigation a {
-	/*color: rgba(255, 255, 255, 0.75);*/
-	color: rgba(100,100,100,0.6);
+	color: rgba(255, 255, 255, 0.75);
 	font-size: 16px;
 	font-weight: 700;
 	margin-left: 40px;
@@ -225,7 +222,7 @@ ul li {
 	transition-duration: 0s;
 }
 .nav-toggle span {
-	background-color: #ccc;
+	background-color: #fff;
 	bottom: auto;
 	display: inline-block;
 	height: 3px;
@@ -318,42 +315,22 @@ ul li {
 }
 .banner-text {
 	padding-top: 15%;
-	/*           22%  */
 }
 .banner-text h1 {
-	/*color: #fff;*/
-	color: rgba(100,100,100,1.0);
+	color: #fff;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-size: 65px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
 .banner-text p {
-	/*color: rgba(255, 255, 255, 0.60); */
-	color: rgba(100,100,100,0.9);
+	color: rgba(255, 255, 255, 0.60);
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 24px;
 	margin-top: 30px;
 	margin-bottom: 80px;
 }
-
-
-/* ------------------------------------------------------------------------------
-	Small Banner
--------------------------------------------------------------------------------*/
-
-.smallbanner {
-	background-image: url(../images/bannersmall2.jpg);
-	background-position: center top;
-	background-repeat: no-repeat;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;
-	min-height: 140px;
-}
-
 /* ==========================================================================
 	$intro
 ========================================================================== */
