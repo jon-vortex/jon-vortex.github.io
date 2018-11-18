@@ -463,8 +463,10 @@
           filters_visibility: true
         },
         paging: {
-          results_per_page: ['Records: ', [5, 10, 50, 100]]
+          pagingLength: 20,
+          results_per_page: ['Records: ', [5, 10, 20]]
         },
+        rememberPageLen: false,
         clear_filter_text:'',
         linked_filters: false,
         disable_excluded_options: false,
@@ -517,7 +519,7 @@
         col_widths: [
             '100px', '150px', '50px',
             '60px', '60px', 
-            '25px', '25px', '25px', '50px', '25px', '25px', '40px', '75px'
+            '25px', '25px', '25px', '50px', '25px', '40px', '40px', '75px'
         ],
         extensions:[{ 
             name: 'sort'
