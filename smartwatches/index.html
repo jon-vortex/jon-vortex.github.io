@@ -115,7 +115,7 @@
     <td> <a href="https://amzn.to/2DFGpRl" target="_blank"> Apple Watch 3 </a> </td>
     <td> <a href="https://amzn.to/2DFGpRl" target="_blank"> <img style="display:block;" width=auto height=70 src="https://images-na.ssl-images-amazon.com/images/I/613S98vTuuL._SL1500_.jpg" alt=" " />  </a> </td>
     <td> <a href="https://amzn.to/2DFGpRl" target="_blank"> $309.00 </a></td>
-    <td>3.7</td>
+    <td>4.3</td>
     <td align="center" style="text-align:center; font-size:150%; font-weight:bold; color:green;">&#10004;</td>
     <td align="center" style="text-align:center; font-size:150%; font-weight:bold; color:green;">&#10004;</td>
     <td align="center" style="text-align:center; font-size:150%; font-weight:bold; color:green;">&#10004;</td>
@@ -757,6 +757,7 @@
     var filtersConfig = {
         base_path: '../tablefilter/',
         col_0: 'checklist',  
+        col_2: 'none',
         col_3: 'select',
         col_4: 'select',
         col_5: 'select',
@@ -777,7 +778,7 @@
         paging: {
           results_per_page: ['Results per page: ', [10, 50, 100]]
         },
-        clear_filter_text:'',
+        clear_filter_text:'-',
         linked_filters: false,
         disable_excluded_options: false,
         load_filters_on_demand: false,
@@ -787,7 +788,7 @@
         enable_default_theme: true,
         btn_reset: true,
         loader: true,
-        status_bar: true,
+        status_bar: false,
         mark_active_columns: true,
         highlight_keywords: false,
         no_results_message: true,
@@ -799,7 +800,7 @@
             'number'
         ],
         custom_options: {
-            cols:[3,4],      //Price, Rating
+            cols:[3,4,10],      //Price, Rating
             texts: [[
                 '< $50',
                 '< $100',
@@ -808,9 +809,16 @@
                 '< $300'
             ],
             [
-                '> 2',
-                '> 3',
-                '> 4'
+                '>3',
+                '>3.5',
+                '>4',
+                '>4.5'
+            ],
+            [
+                '>1',
+                '>5',
+                '>10',
+                '>20'
             ]],
             values: [[
                 '<=50',
@@ -819,15 +827,22 @@
                 '<=200',
                 '<=300'
             ], 
-            [   '>=2',
-                '>=3',
-                '>=4'
+            [   '>=3',
+                '>=3.5',
+                '>=4',
+                '>=4.5'
+            ],    
+            [   
+                '>=1',
+                '>=5',
+                '>=10',
+                '>=20'
             ]],
             sorts: [false]
         },
 
         col_widths: [
-            '85px', '150px', '50px',
+            '100px', '150px', '50px',
             '80px', '60px', 
             '25px', '25px', '25px', '25px', '25px', '25px', '25px'
         ],
@@ -836,7 +851,7 @@
           }, {
             name: 'colsVisibility',
             text: 'Hide columns:',
-            enable_tick_all: true,
+            enable_tick_all: false,
             btn_target_id: 'colsBtn'
         }, {
             name: 'filtersVisibility',

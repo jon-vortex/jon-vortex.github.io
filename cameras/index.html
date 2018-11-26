@@ -428,6 +428,7 @@
     var filtersConfig = {
         base_path: '../tablefilter/',
         col_0: 'checklist',
+        col_2: 'none',
         col_3: 'select',
         col_4: 'select',
         col_5: 'select',
@@ -435,6 +436,7 @@
         col_8: 'select',
         col_9: 'select',
         col_10: 'select',
+        col_11: 'select',
 
         state: {
           types: ['local_storage'],
@@ -448,7 +450,7 @@
         paging: {
           results_per_page: ['Results per page: ', [5, 10, 20]]
         },  
-        clear_filter_text:'',
+        clear_filter_text:'-',
         linked_filters: false,
         disable_excluded_options: false,
         load_filters_on_demand: false,
@@ -470,18 +472,27 @@
             'number'
         ],
         custom_options: {
-            cols:[3,4],      //Price, Rating
+            cols:[3,4,5,11],      //Price, Rating, Megapixels, fps
             texts: [[
-                '< $500',
-                '< $1000',
-                '< $1500',
-                '< $2000',
-                '< $3000'
+                '<$500',
+                '<$1000',
+                '<$1500',
+                '<$2000',
+                '<$3000'
             ],
             [
-                '> 4',
-                '> 4.3',
-                '> 4.6'
+                '>4',
+                '>4.3',
+                '>4.6'
+            ],
+            [
+                '> 20',
+                '> 30',
+                '> 40'
+            ],
+            [
+                '>5',
+                '>10'
             ]],
             values: [[
                 '<=500',
@@ -490,24 +501,34 @@
                 '<=2000',
                 '<=3000'
             ], 
-            [   '>=4',
+            [   
+                '>=4',
                 '>=4.3',
                 '>=4.6'
+            ],
+            [
+                '>=20',
+                '>=30',
+                '>=40'
+            ],
+            [
+                '>=5',
+                '>=10'
             ]],
             sorts: [false]
         },
 
         col_widths: [
-            '90px', '150px', '50px',
-            '70px', '60px', 
-            '25px', '25px', '25px', '50px', '25px', '40px', '40px'
+            '100px', '140px', '50px',
+            '780x', '60px', 
+            '45px', '45px', '45px', '50px', '45px', '45px', '55px'
         ],
         extensions:[{ 
             name: 'sort'
           }, {
             name: 'colsVisibility',
             text: 'Hide columns:',
-            enable_tick_all: true,
+            enable_tick_all: false,
             btn_target_id: 'colsBtn'
         }, {
             name: 'filtersVisibility',
